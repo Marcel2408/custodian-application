@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { archiveTask } from '../../../redux/actions'
+import { HeaderImage } from '../atoms/header/header'
 import { DesktopPageContainer } from './home.styles'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
@@ -20,7 +21,7 @@ class Home extends React.Component {
     render() {
         return (
             <DesktopPageContainer>
-                <div>This is the main page</div>
+                <HeaderImage />
 
                 <button
                     onClick={() => {
