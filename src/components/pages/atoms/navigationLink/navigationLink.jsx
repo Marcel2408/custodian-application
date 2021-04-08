@@ -1,11 +1,10 @@
 import React from 'react'
-import { NavLinkDefault } from './navigationLink.styles'
+import { NavLinkDefault, NavLinkReversed } from './navigationLink.styles'
 
 export const NavigationLink = (props) => {
-    switch (props.type) {
-        case 'reversed':
-            return
-        default:
-            return <NavLinkDefault>{props.children}</NavLinkDefault>
+    if (props.type === 'reversed') {
+        return <NavLinkReversed>{props.children}</NavLinkReversed>
+    } else {
+        return <NavLinkDefault>{props.children}</NavLinkDefault>
     }
 }

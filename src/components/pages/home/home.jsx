@@ -24,9 +24,15 @@ class Home extends React.Component {
             <DesktopPageContainer>
                 <HeaderImage />
 
-                <NavigationLink to="/">Current Tasks</NavigationLink>
-                <NavigationLink to="/">Archived Tasks</NavigationLink>
+                <div className="">
+                    <NavigationLink to="/">Current Tasks</NavigationLink>
+                    <NavigationLink to="/">Archived Tasks</NavigationLink>
+                    <NavigationLink to="/" type="reversed">
+                        New Task
+                    </NavigationLink>
+                </div>
 
+                {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
                 <button
                     onClick={() => {
                         this.props.archiveTask(3)
@@ -35,8 +41,6 @@ class Home extends React.Component {
                     Redux action example: by clicking this, you archive the task
                     of ID 3.
                 </button>
-
-                {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
             </DesktopPageContainer>
         )
     }
