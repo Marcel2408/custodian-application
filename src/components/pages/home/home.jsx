@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { DesktopPageContainer } from './home/home.styles'
-import { archiveTask } from '../../redux/actions/index.js'
+import { archiveTask } from '../../../redux/actions'
+import { DesktopPageContainer } from './home.styles'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
