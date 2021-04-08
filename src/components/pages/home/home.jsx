@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { archiveTask } from '../../../redux/actions'
-import { HeaderImage } from '../atoms/header/header'
+import { HeaderImage } from '../atoms/headerImage/headerImage'
+import { NavigationLink } from '../atoms/navigationLink/navigationLink'
 import { DesktopPageContainer } from './home.styles'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
@@ -22,6 +23,9 @@ class Home extends React.Component {
         return (
             <DesktopPageContainer>
                 <HeaderImage />
+
+                <NavigationLink to="/">Current Tasks</NavigationLink>
+                <NavigationLink to="/">Archived Tasks</NavigationLink>
 
                 <button
                     onClick={() => {

@@ -1,4 +1,4 @@
 import React from 'react'
-import { ImageContainer } from './header.styles'
+import { ImageContainer } from './headerImage.styles'
 
 export const HeaderImage = () => <ImageContainer />
