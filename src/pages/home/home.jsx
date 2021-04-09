@@ -1,7 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { DesktopPageContainer } from './home/home.styles'
-import { archiveTask } from '../../redux/actions/index.js'
+import { archiveTask } from '../../redux/actions'
+import { HeaderImage } from '../../components/atoms/headerImage/headerImage'
+import { DesktopPageContainer } from './home.styles'
+import { NavigationMenu } from '../../components/molecules/navigationMenu/navigationMenu'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
@@ -20,8 +22,11 @@ class Home extends React.Component {
     render() {
         return (
             <DesktopPageContainer>
-                <div>This is the main page</div>
+                <HeaderImage />
 
+                <NavigationMenu />
+
+                {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
                 <button
                     onClick={() => {
                         this.props.archiveTask(3)
@@ -30,8 +35,6 @@ class Home extends React.Component {
                     Redux action example: by clicking this, you archive the task
                     of ID 3.
                 </button>
-
-                {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
             </DesktopPageContainer>
         )
     }

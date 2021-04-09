@@ -6,5 +6,5 @@ export const DesktopPageContainer = styled.div`
     }
 
     max-width: 120rem;
-    margin: 3rem 6rem 3rem 10rem;
+    margin: 7.3rem 10.3rem;
 `
