@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { archiveTask } from '../../redux/actions'
-import { HeaderImage } from '../../components/atoms/headerImage/headerImage'
 import { DesktopPageContainer } from './home.styles'
-import { NavigationMenu } from '../../components/molecules/navigationMenu/navigationMenu'
+import Header from '../../components/organisms/header/header'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
@@ -22,10 +21,7 @@ class Home extends React.Component {
     render() {
         return (
             <DesktopPageContainer>
-                <HeaderImage />
-
-                <NavigationMenu />
-
+                <Header />
                 {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
                 <button
                     onClick={() => {
