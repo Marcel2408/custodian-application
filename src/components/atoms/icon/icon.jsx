@@ -1,10 +1,22 @@
 import React from 'react'
-import { IconChevron, IconCompleted } from './icon.styles'
+import {
+    IconArchive,
+    IconChevron,
+    IconCompleted,
+    IconReminder,
+} from './icon.styles'
 
 export const Icon = (props) => {
-    if (props.type === 'completed') {
-        return <IconCompleted />
-    } else if (props.type === 'chevron') {
-        return <IconChevron />
+    switch (props.type) {
+        case 'completed':
+            return <IconCompleted />
+        case 'chevron':
+            return <IconChevron />
+        case 'archive':
+            return <IconArchive />
+        case 'reminder':
+            return <IconReminder />
+        default:
+            return null
     }
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { archiveTask } from '../../redux/actions'
 import { DesktopPageContainer } from './home.styles'
 import Header from '../../components/organisms/header/header'
-import TaskState from '../../components/molecules/taskState/taskState'
+import Task from '../../components/organisms/task/task'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
@@ -23,7 +23,7 @@ class Home extends React.Component {
         return (
             <DesktopPageContainer>
                 <Header />
-                <TaskState taskId={3} />
+                <Task />
                 {/* On clicking, check what happens in the Redux Dev Tools. It is going to be helpful for your own debugging. */}
                 <button
                     onClick={() => {

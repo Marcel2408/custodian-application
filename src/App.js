@@ -6,16 +6,22 @@ import './App.css'
 
 const theme = {
     colors: {
-        colorPrimary: '#008489',
-        colorPrimaryLight: '#6AB9BC',
-        colorBackground: '#fafafa',
-        colorRed: '#ff6464',
+        primary: '#008489',
+        primaryLight: '#6AB9BC',
+        background: '#fafafa',
+        red: '#ff6464',
+        text: '#676767',
     },
-    sizes: {
-        fontSizeText: '1.2rem',
+    fontSizes: {
+        text: '1.2rem',
+        titleH2: '1.5rem',
+    },
+    fontWeight: {
+        semiBold: '600',
+        bold: '700',
     },
     shadow: {
-        default: '0.4rem 0.3rem 1rem rgba(0,0,0,.1)',
+        default: '0.4rem 0.3rem 1rem rgba(0,0,0,.06)',
     },
 }
 

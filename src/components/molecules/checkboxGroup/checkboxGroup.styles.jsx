@@ -9,8 +9,8 @@ export const CheckboxInput = styled.input`
     opacity: 0;
 `
 export const CheckboxLabel = styled.label`
-    font-size: ${(props) => props.theme.sizes.fontSizeText};
-    font-weight: 600;
+    font-size: ${(props) => props.theme.fontSizes.text};
+    font-weight: ${(props) => props.theme.fontWeight.bold};
     cursor: pointer;
     color: ${(props) => props.theme.colors[props.color]};
 `

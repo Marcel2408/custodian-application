@@ -1,15 +1,19 @@
 import React from 'react'
-import { NavigationLink } from '../../atoms/navigationLink/navigationLink'
+import { Button } from '../../atoms/button/button'
 import { NavMenuContainer } from './navigationMenu.styles'
 
 export const NavigationMenu = (props) => (
     <NavMenuContainer>
         <div>
-            <NavigationLink to="/">Current Tasks</NavigationLink>
-            <NavigationLink to="/">Archived Tasks</NavigationLink>
+            <Button type="link-default" to="/">
+                Current Tasks
+            </Button>
+            <Button type="link-default" to="/">
+                Archived Tasks
+            </Button>
         </div>
-        <NavigationLink to="/" type="reversed">
+        <Button type="link-reversed" to="/">
             Create Task
-        </NavigationLink>
+        </Button>
     </NavMenuContainer>
 )

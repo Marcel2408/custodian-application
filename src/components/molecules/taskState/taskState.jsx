@@ -22,7 +22,7 @@ class TaskState extends React.Component {
         const { tasks, taskId } = this.props
         const currentTask = tasks.find((task) => task.id === taskId)
         const isCompleted = currentTask.completed
-        const checkboxColor = isCompleted ? 'colorPrimaryLight' : 'colorRed'
+        const checkboxColor = isCompleted ? 'primaryLight' : 'red'
         return (
             <TaskStateContainer>
                 <CheckboxGroup
