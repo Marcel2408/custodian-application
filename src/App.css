@@ -18,4 +18,5 @@ html {
 
 body {
     background-color: var(--color-background);
+    font-family: 'Open Sans', sans-serif;
 }

@@ -1,4 +1,4 @@
-import { ARCHIVE_TASK } from '../actions/types'
+import { ARCHIVE_TASK, TOGGLE_COMPLETE_TASK } from '../actions/types'
 
 const initialState = [
     {
@@ -50,6 +50,14 @@ export default function tasks(state = initialState, action) {
                 return task
             })
 
+        case TOGGLE_COMPLETE_TASK:
+            return state.map((task) => {
+                if (task.id === action.id) {
+                    task.completed = action.isCompleted
+                }
+
+                return task
+            })
         default:
             return state
     }

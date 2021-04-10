@@ -1,4 +1,8 @@
-# Welcome ! 
+# Notes
+
+-   checkboxGroup: is a molecule that groups Input and Label, I didn't include them as separate atoms because they need to be together to make sense
+
+# Welcome !
 
 We have provided you with a project (Tasks app) which already has [Redux](https://redux.js.org/), [React](https://reactjs.org/), [Styled Components](https://github.com/styled-components/styled-components) and a basic Router all set up. <br>
 We also have provided you with an example of a Redux action being dispatched (archiveTask). <br>
@@ -6,48 +10,44 @@ We left the UI as bare as possible so to give you a fresh start on that part. We
 
 ### Setting yourself up
 
-- Create a new empty repository in your Github account called `custodian-application`.
-- Clone **this** repository to your local machine.
-- Set the new remote url to your new empty `custodian-application` repository ( command : ` git remote set-url origin [URL-OF-custodian-application]`. 
-- In order to verify that you have your repository as the Git Url, check with : `git remote -v` . 
-- Don't forget to install the dependencies with `npm i` .
-- In the event that you do not have Node v12+ installed on your machine: if you don't have Node installed, we recommend using nvm to install the latest LTS version (run the install script: https://github.com/nvm-sh/nvm#install--update-script, https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b).
-
+-   Create a new empty repository in your Github account called `custodian-application`.
+-   Clone **this** repository to your local machine.
+-   Set the new remote url to your new empty `custodian-application` repository ( command : ` git remote set-url origin [URL-OF-custodian-application]`.
+-   In order to verify that you have your repository as the Git Url, check with : `git remote -v` .
+-   Don't forget to install the dependencies with `npm i` .
+-   In the event that you do not have Node v12+ installed on your machine: if you don't have Node installed, we recommend using nvm to install the latest LTS version (run the install script: https://github.com/nvm-sh/nvm#install--update-script, https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b).
 
 Below are the instructions.
 
 ### Please add to this project the following:
 
-- on the UI side : 
+-   on the UI side :
 
-Please recreate this UI as closely as you can (ignore any mobile version! We actually have put a wrapper already on the page to hide any UI on mobile.): 
+Please recreate this UI as closely as you can (ignore any mobile version! We actually have put a wrapper already on the page to hide any UI on mobile.):
 
 ![tasks - Desktop UI](https://user-images.githubusercontent.com/26336692/113589994-fac56c80-9629-11eb-80aa-30cb23187353.jpg)
 
+-   on the functionality side :
 
-- on the functionality side : 
-
-Toggle the completion status of the task (completed - outstanding ) with a redux action. 
+Toggle the completion status of the task (completed - outstanding ) with a redux action.
 Don't forget to change the UI of the completion status accordingly on the task card (see UI above).
-That's it. You don't have to worry about any other functionality (unless if you would like to do anything else as a bonus, see below - not required.). 
+That's it. You don't have to worry about any other functionality (unless if you would like to do anything else as a bonus, see below - not required.).
 
-- bonus *(Note: this is by no means required.)*
+-   bonus _(Note: this is by no means required.)_
 
-If you'd like to add anything, feel free to do it! It is completely up to you. 
+If you'd like to add anything, feel free to do it! It is completely up to you.
 
 You could for example display the current tasks separately from the archived tasks, like so :
 
 ![image](https://user-images.githubusercontent.com/26336692/113590593-c3a38b00-962a-11eb-9eef-647df29c22d5.png)
 
-Or you could test your code. Or hook up any other form functionality! 
+Or you could test your code. Or hook up any other form functionality!
 
-
-Have fun! 
+Have fun!
 
 Once done, please send us the link to your repository (`custodian-aplication`) - and please send us the access to it, if the repository you created is set to private.
 
 If you have any questions, feel free to email Nathalia at : nathalia.rus@custodian.club and she will come back to you ASAP!
-
 
 # Getting Started with Create React App
 

@@ -5,10 +5,18 @@ import Home from './pages/home/home'
 import './App.css'
 
 const theme = {
-    colorPrimary: '#008489',
-    colorPrimaryLight: '#6AB9BC',
-    colorBackground: '#fafafa',
-    colorRed: '#ff6464',
+    colors: {
+        colorPrimary: '#008489',
+        colorPrimaryLight: '#6AB9BC',
+        colorBackground: '#fafafa',
+        colorRed: '#ff6464',
+    },
+    sizes: {
+        fontSizeText: '1.2rem',
+    },
+    shadow: {
+        default: '0.4rem 0.3rem 1rem rgba(0,0,0,.1)',
+    },
 }
 
 class App extends React.Component {
