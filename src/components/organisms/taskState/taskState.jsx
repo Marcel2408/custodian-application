@@ -2,26 +2,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { toggleCompleteTask } from '../../../redux/actions'
 import { Icon } from '../../atoms/icon/icon'
-import { CheckboxGroup } from '../checkboxGroup/checkboxGroup'
+import { CheckboxGroup } from '../../molecules/checkboxGroup/checkboxGroup'
 import { TaskStateContainer } from './taskState.styles'
 
 const actionCreators = {
     toggleCompleteTask,
 }
 
-const mapStateToProps = (state) => {
-    return { tasks: state }
-}
-
 class TaskState extends React.Component {
-    handleOnChange = (e) => {
-        this.props.toggleCompleteTask(this.props.taskId, e.target.checked)
+    handleOnChange = () => {
+        this.props.toggleCompleteTask(this.props.taskId)
     }
 
     render() {
-        const { tasks, taskId } = this.props
-        const currentTask = tasks.find((task) => task.id === taskId)
-        const isCompleted = currentTask.completed
+        const { isCompleted, taskId } = this.props
         const checkboxColor = isCompleted ? 'primaryLight' : 'red'
         return (
             <TaskStateContainer>
@@ -29,8 +23,8 @@ class TaskState extends React.Component {
                     handleOnChange={this.handleOnChange}
                     color={checkboxColor}
                     isChecked={isCompleted}
-                    checkboxId="taskState"
                     iconType="completed"
+                    checkboxId={taskId}
                 >
                     {isCompleted ? 'completed' : 'outstanding'}
                 </CheckboxGroup>
@@ -40,4 +34,4 @@ class TaskState extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, actionCreators)(TaskState)
+export default connect(null, actionCreators)(TaskState)

@@ -5,8 +5,7 @@ import * as types from './types'
 
 export const archiveTask = (id) => ({ type: types.ARCHIVE_TASK, id })
 
-export const toggleCompleteTask = (id, isCompleted) => ({
+export const toggleCompleteTask = (id) => ({
     type: types.TOGGLE_COMPLETE_TASK,
     id,
-    isCompleted,
 })

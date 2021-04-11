@@ -8,7 +8,7 @@ import {
 } from './button.styles'
 
 export const Button = (props) => {
-    switch (props.type) {
+    switch (props.theme) {
         case 'link-reversed':
             return (
                 <NavLinkReversed to={props.to}>
@@ -21,7 +21,7 @@ export const Button = (props) => {
             )
         case 'archive-default':
             return (
-                <ButtonDefault>
+                <ButtonDefault type="button">
                     <ContentWrapper>
                         <IconArchive />
                         <span>{props.children}</span>
@@ -30,7 +30,7 @@ export const Button = (props) => {
             )
         case 'reminder-default':
             return (
-                <ButtonDefault>
+                <ButtonDefault type="button">
                     <ContentWrapper>
                         <IconReminder />
                         <span>{props.children}</span>
@@ -38,6 +38,6 @@ export const Button = (props) => {
                 </ButtonDefault>
             )
         default:
-            return <ButtonDefault>{props.children}</ButtonDefault>
+            return <ButtonDefault type="button">{props.children}</ButtonDefault>
     }
 }

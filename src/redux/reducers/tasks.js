@@ -53,11 +53,18 @@ export default function tasks(state = initialState, action) {
         case TOGGLE_COMPLETE_TASK:
             return state.map((task) => {
                 if (task.id === action.id) {
-                    task.completed = action.isCompleted
+                    task.completed = !task.completed
                 }
 
                 return task
             })
+        // return {
+        //     ...state,
+        //     [action.id]: {
+        //         ...state[action.id],
+        //         completed: action.isCompleted,
+        //     },
+        // }
         default:
             return state
     }
