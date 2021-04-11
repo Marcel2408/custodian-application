@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import Home from './pages/home/home'
 import './App.css'
+import { DesktopPageContainer } from './pages/home/home.styles'
+import Header from './components/organisms/header/header'
 
 const theme = {
     colors: {
@@ -31,9 +33,12 @@ class App extends React.Component {
             <ThemeProvider theme={theme}>
                 <div className="App">
                     <Router>
-                        <Switch>
-                            <Route path="/" exact component={Home} />
-                        </Switch>
+                        <DesktopPageContainer>
+                            <Header />
+                            <Switch>
+                                <Route path="/" exact component={Home} />
+                            </Switch>
+                        </DesktopPageContainer>
                     </Router>
                 </div>
             </ThemeProvider>

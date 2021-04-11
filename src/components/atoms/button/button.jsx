@@ -11,17 +11,19 @@ export const Button = (props) => {
     switch (props.theme) {
         case 'link-reversed':
             return (
-                <NavLinkReversed to={props.to}>
+                <NavLinkReversed to={props.to} activeClassName="selected">
                     {props.children}
                 </NavLinkReversed>
             )
         case 'link-default':
             return (
-                <NavLinkDefault to={props.to}>{props.children}</NavLinkDefault>
+                <NavLinkDefault to={props.to} activeClassName="selected">
+                    {props.children}
+                </NavLinkDefault>
             )
         case 'archive-default':
             return (
-                <ButtonDefault type="button">
+                <ButtonDefault type="button" onClick={props.handleOnClick}>
                     <ContentWrapper>
                         <IconArchive />
                         <span>{props.children}</span>
@@ -30,7 +32,7 @@ export const Button = (props) => {
             )
         case 'reminder-default':
             return (
-                <ButtonDefault type="button">
+                <ButtonDefault type="button" onClick={props.handleOnClick}>
                     <ContentWrapper>
                         <IconReminder />
                         <span>{props.children}</span>
@@ -38,6 +40,10 @@ export const Button = (props) => {
                 </ButtonDefault>
             )
         default:
-            return <ButtonDefault type="button">{props.children}</ButtonDefault>
+            return (
+                <ButtonDefault onClick={props.handleOnClick} type="button">
+                    {props.children}
+                </ButtonDefault>
+            )
     }
 }

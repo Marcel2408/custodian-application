@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { DesktopPageContainer } from './home.styles'
-import Header from '../../components/organisms/header/header'
 import Task from '../../components/organisms/task/task'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
@@ -15,14 +13,15 @@ const mapStateToProps = (state) => {
 
 class Home extends React.Component {
     render() {
-        const { tasks } = this.props
+        const currentTasks = this.props.tasks.filter(
+            (task) => task.archived === false
+        )
         return (
-            <DesktopPageContainer>
-                <Header />
-                {tasks.map((task) => (
+            <main>
+                {currentTasks.map((task) => (
                     <Task key={task.id} task={task} />
                 ))}
-            </DesktopPageContainer>
+            </main>
         )
     }
 }

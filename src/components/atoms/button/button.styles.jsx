@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 const defaultStyles = css`
@@ -10,6 +10,7 @@ const defaultStyles = css`
 `
 const buttonStyles = css`
     padding: 0.9rem 2.3rem;
+    outline: none;
     &:not(:last-child) {
         margin-right: 1rem;
     }
@@ -19,6 +20,7 @@ const linkStyles = css`
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.9rem 2.7rem;
+
     &:not(:last-child) {
         margin-right: 2.5rem;
     }
@@ -54,16 +56,24 @@ export const ButtonDefault = styled.button`
     }
 `
 
-export const NavLinkDefault = styled(Link)`
+export const NavLinkDefault = styled(NavLink)`
     ${defaultStyles}
     ${linkStyles}
     ${defaultHover}
+    &.selected {
+        background-color: ${(props) => props.theme.colors.primaryLight};
+        color: #fff;
+    }
 `
 
-export const NavLinkReversed = styled(Link)`
+export const NavLinkReversed = styled(NavLink)`
     ${defaultStyles}
     ${linkStyles}
     ${reversedHover}
+    &.selected {
+        border: 2px solid ${(props) => props.theme.colors.primaryLight};
+        background-color: ${(props) => props.theme.colors.primaryLight};
+    }
 `
 export const ContentWrapper = styled.div`
     display: flex;

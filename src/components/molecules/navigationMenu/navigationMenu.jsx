@@ -8,11 +8,11 @@ export const NavigationMenu = (props) => (
             <Button theme="link-default" to="/">
                 Current Tasks
             </Button>
-            <Button theme="link-default" to="/">
+            <Button theme="link-default" to="/archived">
                 Archived Tasks
             </Button>
         </div>
-        <Button theme="link-reversed" to="/">
+        <Button theme="link-reversed" to="/new-task">
             Create Task
         </Button>
     </NavMenuContainer>
