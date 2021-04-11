@@ -3,8 +3,9 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import Home from './pages/home/home'
 import './App.css'
-import { DesktopPageContainer } from './pages/home/home.styles'
+import { DesktopPageContainer } from './App.styles'
 import Header from './components/organisms/header/header'
+import { PageGrid } from './components/templates/page/page.styles'
 
 const theme = {
     colors: {
@@ -34,10 +35,12 @@ class App extends React.Component {
                 <div className="App">
                     <Router>
                         <DesktopPageContainer>
-                            <Header />
-                            <Switch>
-                                <Route path="/" exact component={Home} />
-                            </Switch>
+                            <PageGrid>
+                                <Header />
+                                <Switch>
+                                    <Route path="/" exact component={Home} />
+                                </Switch>
+                            </PageGrid>
                         </DesktopPageContainer>
                     </Router>
                 </div>

@@ -1,5 +1,7 @@
 # Notes
 
+-   grid: I have applied a grid to the page, that for a simple layot like this one it is perhaps not necessary, but just wanted to demonstrate that I know how to use it.
+-   template folder: created a page template to be consistent with the atomic design, as you can see I am a newbie in this methodology but really keen on master it with your guidance!
 -   checkboxGroup: is a molecule that groups Input and Label, I didn't include them as separate atoms because they need to be together to make sense
 
 # Welcome !

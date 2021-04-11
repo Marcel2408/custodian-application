@@ -9,7 +9,7 @@ export const TaskContentContainer = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-    width: 87%;
+    width: 84%;
 `
 
 export const ButtonWrapper = styled.div`

@@ -1,14 +1,15 @@
 import React from 'react'
 import { HeaderImage } from '../../atoms/headerImage/headerImage'
 import { NavigationMenu } from '../../molecules/navigationMenu/navigationMenu'
+import { HeaderContainer } from './header.styles'
 
 class Header extends React.Component {
     render() {
         return (
-            <header>
+            <HeaderContainer>
                 <HeaderImage />
                 <NavigationMenu />
-            </header>
+            </HeaderContainer>
         )
     }
 }

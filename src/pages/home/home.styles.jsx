@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const DesktopPageContainer = styled.div`
-    @media (max-width: 768px) {
-        display: none;
-    }
+export const MainContainer = styled.main`
+    grid-area: main;
+    min-height: 30rem;
 
-    max-width: 120rem;
-    margin: 7.3rem 10.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 `
