@@ -8,36 +8,19 @@ import {
 import { ThemeProvider } from 'styled-components'
 import Home from './pages/home/home'
 import './App.css'
-import { DesktopPageContainer } from './App.styles'
-
-const theme = {
-    colors: {
-        primary: '#008489',
-        primaryLight: '#6AB9BC',
-        background: '#fafafa',
-        red: '#ff6464',
-        text: '#676767',
-    },
-    fontSizes: {
-        text: '1.2rem',
-        titleH2: '1.5rem',
-    },
-    fontWeight: {
-        semiBold: '600',
-        bold: '700',
-    },
-    shadow: {
-        default: '0.4rem 0.3rem 1rem rgba(0,0,0,.06)',
-    },
-}
+import { DesktopPageContainer, theme } from './App.styles'
+import Header from './components/organisms/header/header'
+import PageTemplate from './components/templates/page/page'
+import Archive from './pages/archive/archive'
 
 class App extends React.Component {
     render() {
         return (
             <ThemeProvider theme={theme}>
-                <div className="App">
-                    <Router>
-                        <DesktopPageContainer>
+                <Router>
+                    <DesktopPageContainer>
+                        <PageTemplate>
+                            <Header />
                             <Switch>
                                 <Route
                                     path="/current-tasks"
@@ -47,7 +30,7 @@ class App extends React.Component {
                                 <Route
                                     path="/archived"
                                     exact
-                                    component={Home}
+                                    component={Archive}
                                 />
                                 <Route
                                     path="/"
@@ -57,9 +40,9 @@ class App extends React.Component {
                                     )}
                                 />
                             </Switch>
-                        </DesktopPageContainer>
-                    </Router>
-                </div>
+                        </PageTemplate>
+                    </DesktopPageContainer>
+                </Router>
             </ThemeProvider>
         )
     }

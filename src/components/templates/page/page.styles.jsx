@@ -5,7 +5,7 @@ export const PageGrid = styled.div`
     grid-template-rows: repeat(3, max-content);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-        'header header'
-        'header header'
+        'head head'
+        'head head'
         'main main';
 `

@@ -3,8 +3,7 @@ import { withRouter } from 'react-router'
 import { Button } from '../../atoms/button/button'
 import { NavMenuContainer } from './navigationMenu.styles'
 
-const NavigationMenu = (props) => {
-    console.log(props)
+const NavigationMenu = () => {
     return (
         <NavMenuContainer>
             <div>

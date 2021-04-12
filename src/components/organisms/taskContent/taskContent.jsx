@@ -24,7 +24,7 @@ class TaskContent extends React.Component {
         return (
             <TaskContentContainer>
                 <ContentWrapper>
-                    <Title>{title}</Title>
+                    <Title theme="heading-2">{title}</Title>
                     <Paragraph>{body}</Paragraph>
                     <ButtonWrapper>
                         <Button
