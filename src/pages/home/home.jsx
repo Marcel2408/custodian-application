@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Task from '../../components/organisms/task/task'
 import { MainContainer } from './home.styles'
 import Header from '../../components/organisms/header/header'
+import { PageGrid } from '../../components/templates/page/page.styles'
+import { withRouter } from 'react-router'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
@@ -15,20 +17,22 @@ const mapStateToProps = (state) => {
 
 class Home extends React.Component {
     render() {
-        const currentTasks = this.props.tasks.filter(
-            (task) => task.archived === false
+        const currentTasks = this.props.tasks.filter((task) =>
+            this.props.location.pathname === '/current-tasks'
+                ? task.archived === false
+                : task.archived === true
         )
         return (
-            <>
+            <PageGrid>
                 <Header />
                 <MainContainer>
                     {currentTasks.map((task) => (
                         <Task key={task.id} task={task} />
                     ))}
                 </MainContainer>
-            </>
+            </PageGrid>
         )
     }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(withRouter(Home))
