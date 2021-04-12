@@ -13,6 +13,7 @@ class Task extends React.Component {
                     taskId={task.id}
                     title={task.title}
                     body={task.body}
+                    archived={task.archived}
                 />
             </TaskArticle>
         )

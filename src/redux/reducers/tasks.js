@@ -1,4 +1,4 @@
-import { ARCHIVE_TASK, TOGGLE_COMPLETE_TASK } from '../actions/types'
+import { TOGGLE_ARCHIVE_TASK, TOGGLE_COMPLETE_TASK } from '../actions/types'
 
 const initialState = [
     {
@@ -41,10 +41,10 @@ const initialState = [
 
 export default function tasks(state = initialState, action) {
     switch (action.type) {
-        case ARCHIVE_TASK:
+        case TOGGLE_ARCHIVE_TASK:
             return state.map((task) => {
                 if (task.id === action.id) {
-                    task.archived = true
+                    task.archived = !task.archived
                 }
 
                 return task
