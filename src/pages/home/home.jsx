@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
 
 class Home extends React.Component {
     render() {
-        const currentTasks = this.props.tasks.filter((task) =>
+        const tasks = this.props.tasks.filter((task) =>
             this.props.location.pathname === '/current-tasks'
                 ? task.archived === false
                 : task.archived === true
@@ -26,7 +26,7 @@ class Home extends React.Component {
             <PageGrid>
                 <Header />
                 <MainContainer>
-                    {currentTasks.map((task) => (
+                    {tasks.map((task) => (
                         <Task key={task.id} task={task} />
                     ))}
                 </MainContainer>
