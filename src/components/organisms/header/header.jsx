@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderImage } from '../../atoms/headerImage/headerImage'
-import { NavigationMenu } from '../../molecules/navigationMenu/navigationMenu'
+import NavigationMenu from '../../molecules/navigationMenu/navigationMenu'
 import { HeaderContainer } from './header.styles'
 
 class Header extends React.Component {

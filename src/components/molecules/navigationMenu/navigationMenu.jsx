@@ -1,19 +1,25 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import { Button } from '../../atoms/button/button'
 import { NavMenuContainer } from './navigationMenu.styles'
 
-export const NavigationMenu = (props) => (
-    <NavMenuContainer>
-        <div>
-            <Button theme="link-default" to="/">
-                Current Tasks
+const NavigationMenu = (props) => {
+    console.log(props)
+    return (
+        <NavMenuContainer>
+            <div>
+                <Button theme="link-default" to="/current-tasks">
+                    Current Tasks
+                </Button>
+                <Button theme="link-default" to="/archived">
+                    Archived Tasks
+                </Button>
+            </div>
+            <Button theme="link-reversed" to="/new-task">
+                Create Task
             </Button>
-            <Button theme="link-default" to="/archived">
-                Archived Tasks
-            </Button>
-        </div>
-        <Button theme="link-reversed" to="/new-task">
-            Create Task
-        </Button>
-    </NavMenuContainer>
-)
+        </NavMenuContainer>
+    )
+}
+
+export default withRouter(NavigationMenu)

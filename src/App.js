@@ -1,10 +1,14 @@
 import React from 'react'
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+import {
+    Route,
+    BrowserRouter as Router,
+    Switch,
+    Redirect,
+} from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import Home from './pages/home/home'
 import './App.css'
 import { DesktopPageContainer } from './App.styles'
-import Header from './components/organisms/header/header'
 import { PageGrid } from './components/templates/page/page.styles'
 
 const theme = {
@@ -36,9 +40,24 @@ class App extends React.Component {
                     <Router>
                         <DesktopPageContainer>
                             <PageGrid>
-                                <Header />
                                 <Switch>
-                                    <Route path="/" exact component={Home} />
+                                    <Route
+                                        path="/current-tasks"
+                                        exact
+                                        component={Home}
+                                    />
+                                    <Route
+                                        path="/archived"
+                                        exact
+                                        component={Home}
+                                    />
+                                    <Route
+                                        path="/"
+                                        exact
+                                        render={() => (
+                                            <Redirect to="/current-tasks" />
+                                        )}
+                                    />
                                 </Switch>
                             </PageGrid>
                         </DesktopPageContainer>

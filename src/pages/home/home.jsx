@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Task from '../../components/organisms/task/task'
 import { MainContainer } from './home.styles'
+import Header from '../../components/organisms/header/header'
 
 // Dont worry about mobile UI. Pretend this is only for Desktop.
 // Hence why the media query below has been added.
@@ -18,11 +19,14 @@ class Home extends React.Component {
             (task) => task.archived === false
         )
         return (
-            <MainContainer>
-                {currentTasks.map((task) => (
-                    <Task key={task.id} task={task} />
-                ))}
-            </MainContainer>
+            <>
+                <Header />
+                <MainContainer>
+                    {currentTasks.map((task) => (
+                        <Task key={task.id} task={task} />
+                    ))}
+                </MainContainer>
+            </>
         )
     }
 }
