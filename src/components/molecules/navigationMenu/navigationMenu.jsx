@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router'
 import { Button } from '../../atoms/button/button'
 import { NavMenuContainer } from './navigationMenu.styles'
 
@@ -21,4 +20,4 @@ const NavigationMenu = () => {
     )
 }
 
-export default withRouter(NavigationMenu)
+export default NavigationMenu

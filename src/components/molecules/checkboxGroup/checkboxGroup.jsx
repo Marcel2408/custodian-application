@@ -13,7 +13,7 @@ export const CheckboxGroup = ({
     checkboxId,
     children,
     isChecked,
-    iconType,
+    iconTheme,
 }) => (
     <CheckboxGroupContainer>
         <CheckboxInput
@@ -23,7 +23,7 @@ export const CheckboxGroup = ({
         />
         <CheckboxLabel htmlFor={checkboxId} color={color}>
             <CheckboxButton color={color}>
-                {isChecked ? <Icon type={iconType} /> : ''}
+                {isChecked ? <Icon theme={iconTheme} /> : ''}
             </CheckboxButton>
             {children}
         </CheckboxLabel>

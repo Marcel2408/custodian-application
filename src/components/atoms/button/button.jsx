@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconArchive, IconReminder } from '../icon/icon.styles'
+import { Icon } from '../icon/icon'
 import {
     ButtonDefault,
     ContentWrapper,
@@ -25,7 +25,7 @@ export const Button = (props) => {
             return (
                 <ButtonDefault type="button" onClick={props.handleOnClick}>
                     <ContentWrapper>
-                        <IconArchive />
+                        <Icon theme="archive" />
                         <span>{props.children}</span>
                     </ContentWrapper>
                 </ButtonDefault>
@@ -34,7 +34,7 @@ export const Button = (props) => {
             return (
                 <ButtonDefault type="button" onClick={props.handleOnClick}>
                     <ContentWrapper>
-                        <IconReminder />
+                        <Icon theme="reminder" />
                         <span>{props.children}</span>
                     </ContentWrapper>
                 </ButtonDefault>

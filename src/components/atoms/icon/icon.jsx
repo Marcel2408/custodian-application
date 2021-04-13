@@ -7,7 +7,7 @@ import {
 } from './icon.styles'
 
 export const Icon = (props) => {
-    switch (props.type) {
+    switch (props.theme) {
         case 'completed':
             return <IconCompleted />
         case 'chevron':

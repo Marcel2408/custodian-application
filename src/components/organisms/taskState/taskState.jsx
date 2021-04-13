@@ -23,12 +23,12 @@ class TaskState extends React.Component {
                     handleOnChange={this.handleOnChange}
                     color={checkboxColor}
                     isChecked={isCompleted}
-                    iconType="completed"
+                    iconTheme="completed"
                     checkboxId={taskId}
                 >
                     {isCompleted ? 'completed' : 'outstanding'}
                 </CheckboxGroup>
-                <Icon type="chevron" />
+                <Icon theme="chevron" />
             </TaskStateContainer>
         )
     }
