@@ -1,6 +1,6 @@
 import { TOGGLE_ARCHIVE_TASK, TOGGLE_COMPLETE_TASK } from '../actions/types'
 
-const initialState = [
+export const initialState = [
     {
         title: 'Renew Parking Permit',
         body:
