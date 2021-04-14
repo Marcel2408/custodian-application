@@ -58,13 +58,7 @@ export default function tasks(state = initialState, action) {
 
                 return task
             })
-        // return {
-        //     ...state,
-        //     [action.id]: {
-        //         ...state[action.id],
-        //         completed: action.isCompleted,
-        //     },
-        // }
+
         default:
             return state
     }

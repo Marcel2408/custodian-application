@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { CheckboxGroup } from './checkboxGroup'
 import { CheckboxGroupContainer, CheckboxLabel } from './checkboxGroup.styles'
-import 'jest-styled-components'
 
 const defaultProps = {
     handleOnChange: jest.fn(),

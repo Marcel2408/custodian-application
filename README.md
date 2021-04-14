@@ -1,8 +1,68 @@
-# Notes
+# Custodian task - Marcel Subirana
 
--   grid: I have applied a grid to the page, that for a simple layot like this one it is perhaps not necessary, but just wanted to demonstrate that I know how to use it.
--   template folder: created a page template to be consistent with the atomic design, as you can see I am a newbie in this methodology but really keen on master it with your guidance!
--   checkboxGroup: is a molecule that groups Input and Label, I didn't include them as separate atoms because they need to be together to make sense
+Dear Custodian team,
+
+welcome to my version of the tasks application!
+
+The project needs some steps to run properly as described below:
+
+## Get started
+
+Clone the repo:
+
+```bash
+$ git clone https://github.com/Marcel2408/custodian-application
+$ cd custodian-application
+```
+
+I added 2 npm packages in order to develop tests:
+
+[Enzyme](https://www.npmjs.com/package/enzyme)
+
+[@wojtekmaj/enzyme-adapter-react-17](https://www.npmjs.com/package/@wojtekmaj/enzyme-adapter-react-17): well maintained and with many downloads, yet unofficial package to adapt Enzyme to React 17.
+
+Make sure you install them by typing in your terminal:
+
+```bash
+$ npm install
+```
+
+Now you are ready to start the app using :
+
+```bash
+$ npm start
+```
+
+The server will run on port 3000 by default.
+
+Alternatively, you can run the tests suits by typing:
+
+```bash
+$ npm test
+```
+
+## Notes
+
+-   Atomic design principles: I tried to follow the methodology as best as possible, making reusable atoms and molecules, and combining them into organisms. I also created two templates, mainly for the CSS grid that I designed and the dashboard flexbox design.
+-   Class components and functional components: I decided to use functional components for atoms and molecules, where no access to state is needed, and then I built the organisms and pages using class components connected to Redux.
+-   CSS Grid: I have applied a grid to the page, that for a simple layout like this one it is perhaps not necessary, but just wanted to demonstrate that I know how to use it.
+-   CheckboxGroup: is a molecule that groups Input and Label, I didn't include them as separate atoms because they need to be together to make sense.
+-   Testing: 
+    -   I developed unit tests for some of the components (App, Home, CheckboxGroup). I tried to focus on the behavior more than the implementation details to avoid breaking them on every eventual refactor.
+    -   I also developed unit tests for the action creators and the reducer.
+    -   Finally, I developed an integration test for the actions and the reducer together.
+    -   I didn't intend to test all components but rather demonstrate my knowledge on unit and integration tests. I am actually working on improving this skill, and in this case for instance I never tested Styled-components so it is definitely one of my main points in which I have a lot of room for improvement.
+-   Extras: 
+    -   I developed the proposed bonus functionality of dividing the view between 'Current tasks' and 'Archived tasks'.
+    -   Added the functionality to 'unarchive' the task as well
+    -   Styled the hero image to make a scaling effect on hover
+    -   Tests: Added tests as discussed in the previous point
+
+
+
+Thank you for the opportunity, I had fun and even learned some tricks about Styled-components and testing along the way!
+
+
 
 # Welcome !
 
